@@ -9,4 +9,15 @@ function newItem(){
   }else{
     $('#list').append(li);
   }
+
+  function crossOut(){
+    li.toggleClass("strike");
+  }
+
+  li.on("dblclick", crossOut);
+
+  let crossOutButton = $('<crossOutButton></crossOutButton>');
+  crossOutButton.append(document.createTextNode('X'));
+  li.append(crossOutButton);
+
 }
